@@ -1,0 +1,60 @@
+<div class="wrapper">
+  <mat-sidenav-container>
+    <mat-sidenav
+      #sidenav
+      mode="side"
+      [(opened)]="sidenavOpened"
+      (opened)="events.push('open!')"
+      (closed)="events.push('closed!')"
+    >
+      <div class="profile-details">
+        <h3 class="title">Software Engineer</h3>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a routerLink="/profile" routerLinkActive="active">Profile</a>
+          </li>
+          <hr />
+          <li class="menu-item">
+            <a routerLink="/experience" routerLinkActive="active">Experience</a>
+          </li>
+          <hr />
+          <li class="menu-item">
+            <a routerLink="/skills" routerLinkActive="active">Skills</a>
+          </li>
+          <hr />
+          <li class="menu-item">
+            <a routerLink="/education" routerLinkActive="active">Education</a>
+          </li>
+          <hr />
+          <li class="menu-item">
+            <a routerLink="/certifications" routerLinkActive="active"
+              >Certifications</a
+            >
+          </li>
+          <hr />
+        </ul>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <header>
+        <mat-toolbar>
+          <button
+            mat-icon-button
+            class="menu-icon"
+            aria-label="Menu icon"
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span>Nestor Madrigal</span>
+        </mat-toolbar>
+      </header>
+      <div class="main-content">
+        <!-- <h1>Nesamaju profile</h1> -->
+        <router-outlet />
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
