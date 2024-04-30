@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,17 +15,32 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileService } from './services/profile.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { DataService } from './services/api-connector.service';
+
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, ExperienceComponent, SkillsComponent, EducationComponent, CertificationsComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    ExperienceComponent,
+    SkillsComponent,
+    EducationComponent,
+    CertificationsComponent,
+    ProfileComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
+    MatCardModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), ProfileService, HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

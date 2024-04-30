@@ -1,0 +1,18 @@
+.mat-mdc-card {
+  .mat-mdc-card-header {
+    padding: 16px;
+    background-color: rgb(185, 185, 185);
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      .mat-mdc-card-subtitle {
+        align-content: center;
+      }
+    }
+  }
+  .mat-mdc-card-content {
+    padding: 16px;
+  }
+}

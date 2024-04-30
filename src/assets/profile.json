@@ -1,0 +1,48 @@
+{
+  "firstName": "Nestor",
+  "lastName": "Madrigal",
+  "username": "nesamaju",
+  "title": "Software Engineer",
+  "phone": "4253260824",
+  "email": "nestor_madrigal@outlook.com",
+  "location": "Gig Harbor, WA",
+  "experience": [
+    {
+      "company": "Apexon corporation",
+      "startDate": "07/2020",
+      "endDate": "",
+      "currentJob": true,
+      "role": "Software Engineer",
+      "responsabilities": [
+        {
+          "clientName": "Memorial Sloan Kettering center",
+          "duties": [
+            {
+              "name": "Improved a healthcare application performance by creating and implementing a SQL server ETL from a replica DB source resulting in application 90% faster"
+            },
+            {
+              "name": "Collaborating on creating Python scripts for monitoring data synchronization eliminating the need of human intervention to ensure integrity for PHI and sensitive data"
+            },
+            {
+              "name": "Architected a cloud solution in AWS to support ETL, application health and data integrity mainly using RDS, EC2, Lambda functions, Docker"
+            },
+            {
+              "name": "Patched application by implementing TypeORM with Express Js with the best practices to fix a potential security breach through SQL injection and scripting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company": "IMCS group",
+      "startDate": "03/2019",
+      "endDate": "06/2020",
+      "currentJob": false,
+      "role": "Software Engineer",
+      "duties": [{}]
+    }
+  ],
+  "skills": {},
+  "education": {},
+  "certification": {}
+}
