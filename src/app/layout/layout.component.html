@@ -13,23 +13,46 @@
       <nav>
         <ul class="menu">
           <li class="menu-item">
-            <a routerLink="/profile" routerLinkActive="active">Profile</a>
+            <a
+              routerLink="/profile"
+              routerLinkActive="active"
+              [state]="this.profileData.profile"
+              >Profile</a
+            >
           </li>
           <hr />
           <li class="menu-item">
-            <a routerLink="/experience" routerLinkActive="active">Experience</a>
+            <a
+              routerLink="/experience"
+              routerLinkActive="active"
+              [state]="this.profileData.experience"
+              >Experience</a
+            >
           </li>
           <hr />
           <li class="menu-item">
-            <a routerLink="/skills" routerLinkActive="active">Skills</a>
+            <a
+              routerLink="/skills"
+              routerLinkActive="active"
+              [state]="this.profileData.skills"
+              >Skills</a
+            >
           </li>
           <hr />
           <li class="menu-item">
-            <a routerLink="/education" routerLinkActive="active">Education</a>
+            <a
+              routerLink="/education"
+              routerLinkActive="active"
+              [state]="this.profileData.education"
+              >Education</a
+            >
           </li>
           <hr />
           <li class="menu-item">
-            <a routerLink="/certifications" routerLinkActive="active"
+            <a
+              routerLink="/certifications"
+              routerLinkActive="active"
+              [state]="this.profileData.certification"
               >Certifications</a
             >
           </li>

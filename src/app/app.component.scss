@@ -166,6 +166,22 @@
 //   }
 // }
 
+:root {
+  --main-bg: #00bfea;
+  --accent-clr: #58fbda;
+}
+
+@property --accent-clr {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #58fbda;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
 main {
   height: 100%;
+  // background-color: var(--accent-clr, #00bfea);
 }

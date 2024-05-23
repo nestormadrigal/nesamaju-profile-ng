@@ -1,0 +1,79 @@
+@if (profileData) {
+<section>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{ profileData.firstName }} {{ profileData.lastName }}
+        <mat-card-subtitle>{{ profileData.title }}</mat-card-subtitle>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="header-content">
+        <!-- <div class="profile-details"> -->
+        <p>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Phone icon"
+            fontIcon="smartphone"
+          ></mat-icon
+          >{{ profileData.phone }}
+        </p>
+        <p>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Email icon"
+            fontIcon="email"
+          ></mat-icon>
+          {{ profileData.email }}
+        </p>
+        <p>
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Location icon"
+            fontIcon="maplocation"
+          ></mat-icon
+          >{{ profileData.location }}
+        </p>
+        <!-- </div> -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- <h2>{{ 'Experience' }}</h2> -->
+  <!-- <hr /> -->
+  <!-- @if (profileData.experience?.length) { @for (experience of
+  profileData.experience; track experience) {
+  <mat-card>
+    <mat-card-header>
+      <div class="header-content">
+        <mat-card-title>
+          {{ experience.company }}
+          <mat-card-subtitle>{{ experience.role }}</mat-card-subtitle>
+        </mat-card-title>
+        <mat-card-subtitle
+          >{{ experience.startDate }} -
+          {{
+            experience.currentJob ? 'Present' : experience.endDate
+          }}</mat-card-subtitle
+        >
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      @for (task of experience.responsabilities; track task) {
+      <div class="client-duties">
+        <h4>Client: {{ task.clientName }}</h4>
+        <hr />
+        <ul>
+          @for (duty of task.duties; track duty) {
+          <li>
+            {{ duty.name }}
+          </li>
+          }
+        </ul>
+      </div>
+      }
+    </mat-card-content>
+  </mat-card>
+  } } -->
+</section>
+}

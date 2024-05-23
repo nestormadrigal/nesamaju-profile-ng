@@ -1,11 +1,13 @@
 {
-  "firstName": "Nestor",
-  "lastName": "Madrigal",
-  "username": "nesamaju",
-  "title": "Software Engineer",
-  "phone": "4253260824",
-  "email": "nestor_madrigal@outlook.com",
-  "location": "Gig Harbor, WA",
+  "profile": {
+    "firstName": "Nestor",
+    "lastName": "Madrigal",
+    "username": "nesamaju",
+    "title": "Software Engineer",
+    "phone": "4253260824",
+    "email": "nestor_madrigal@outlook.com",
+    "location": "Gig Harbor, WA"
+  },
   "experience": [
     {
       "company": "Apexon corporation",
@@ -39,6 +41,38 @@
       "endDate": "06/2020",
       "currentJob": false,
       "role": "Software Engineer",
+      "duties": [{}]
+    },
+    {
+      "company": "Global Hitss",
+      "startDate": "05/2018",
+      "endDate": "01/2019",
+      "currentJob": false,
+      "role": "Frontend Engineer",
+      "duties": [{}]
+    },
+    {
+      "company": "Definity First",
+      "startDate": "07/2012",
+      "endDate": "05/2018",
+      "currentJob": false,
+      "role": "UI Engineer",
+      "duties": [{}]
+    },
+    {
+      "company": "Universidad Xochicalco",
+      "startDate": "03/2011",
+      "endDate": "06/2012",
+      "currentJob": false,
+      "role": "Web Developer",
+      "duties": [{}]
+    },
+    {
+      "company": "CICESE",
+      "startDate": "02/2008",
+      "endDate": "03/2011",
+      "currentJob": false,
+      "role": "Web Developer",
       "duties": [{}]
     }
   ],

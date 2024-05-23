@@ -1,0 +1,46 @@
+.timeline-container {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  max-width: 35rem;
+  margin: 0 auto;
+
+  .timeline-year {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 2rem 0;
+
+    .year-name {
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+      &::after {
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin: 0 auto;
+        width: 2px;
+        height: 10rem;
+        background-color: #494454;
+        content: '';
+      }
+    }
+    .job-summary-card {
+      align-items: flex-start;
+      width: 40%;
+      height: 4rem;
+      padding: 1rem;
+      box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem #494454;
+      border-radius: 0.4rem;
+      background-color: #aea8ba;
+    }
+    &.odd {
+      .job-summary-card {
+        align-self: flex-end;
+        background-color: #007ce9;
+      }
+    }
+  }
+}

@@ -52,9 +52,24 @@
 
   .mat-sidenav-container {
     height: 100%;
+    background-color: var(--accent-clr);
+  }
+
+  header .mat-toolbar {
+    background-color: #494454;
+    color: #fff;
   }
 
   .main-content {
     padding: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    .main-content {
+      max-width: 75vw;
+      margin: 0 auto;
+    }
   }
 }

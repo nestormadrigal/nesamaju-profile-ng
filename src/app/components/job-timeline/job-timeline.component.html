@@ -1,0 +1,10 @@
+<div class="timeline-container">
+  @for (year of professionalExperience; track $index) {
+  <div [ngClass]="$index % 2 === 1 ? 'odd' : ''" class="timeline-year">
+    <h4 class="year-name">{{ year.yearLabel }}</h4>
+    <div class="job-summary-card">
+      <h4>{{ year.companyName }}</h4>
+    </div>
+  </div>
+  }
+</div>

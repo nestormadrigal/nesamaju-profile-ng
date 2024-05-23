@@ -27,6 +27,30 @@ export class ProfileService extends DataService<IUserProfile> {
 }
 
 export class IUserProfile {
+  profile: IProfile;
+  experience?: IExperience[];
+  skills?: ISkill[];
+  education?: IEducation[];
+  certification?: ICertification[];
+
+  constructor() {
+    this.profile = {
+      username: '',
+      firstName: '',
+      lastName: '',
+      title: '',
+      phone: '',
+      email: '',
+      location: '',
+    };
+    this.experience = [];
+    this.skills = [];
+    this.education = [];
+    this.certification = [];
+  }
+}
+
+export interface IProfile {
   username: string;
   firstName: string;
   lastName: string;
@@ -34,26 +58,8 @@ export class IUserProfile {
   phone: string;
   email: string;
   location: string;
-  experience?: IExperience[];
-  skills?: ISkill[];
-  education?: IEducation[];
-  certification?: ICertification[];
-
-  constructor() {
-    this.username = '';
-    this.firstName = '';
-    this.lastName = '';
-    this.title = '';
-    this.phone = '';
-    this.email = '';
-    this.location = '';
-    this.experience = [];
-    this.skills = [];
-    this.education = [];
-    this.certification = [];
-  }
 }
-interface IExperience {
+export interface IExperience {
   company: string;
   startDate: Date;
   endDate: Date;
@@ -62,13 +68,13 @@ interface IExperience {
   responsabilities: IResponsability[];
 }
 
-interface ISkill {
+export interface ISkill {
   name: string;
   experienceYears?: string;
   experienceLevel?: string;
 }
 
-interface IEducation {
+export interface IEducation {
   name: string;
   title: string;
   school: string;
@@ -76,24 +82,17 @@ interface IEducation {
   endDate: Date;
 }
 
-interface IResponsability {
+export interface IResponsability {
   clientName: string;
   duties: IDuties[];
 }
 
-interface IDuties {
+export interface IDuties {
   name: string;
   title?: string;
 }
 
-interface ICertification {
-  name: string;
-  school: string;
-  startDate: Date;
-  endDate: Date;
-}
-
-interface ICertification {
+export interface ICertification {
   name: string;
   entity: string;
   valid: Date;
