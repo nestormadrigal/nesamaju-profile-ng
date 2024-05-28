@@ -1,13 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {
-  IExperience,
-  IProfile,
-  IUserProfile,
-  ProfileService,
-} from '../../services/profile.service';
+import { IExperience } from '../../services/profile.service';
 import { Router } from '@angular/router';
+import moment from 'moment';
 
 @Component({
   selector: 'app-job-timeline',
@@ -31,28 +27,32 @@ export class JobTimelineComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('year ', this.currentYear);
-
     for (let i = 0; i < this.yearsOfExperience; i++) {
-      this.yearStrings.push((this.currentYear - i).toString());
+      this.yearStrings.push(this.currentYear.toString());
 
-      for (let j = 0; j < Object.values(this.experienceData).length; j++) {
-        const startYear = this.experienceData[j]?.startDate;
-        const endYear = this.experienceData[j]?.endDate;
-        // (startYear && endYear) ||
-        // (this.experienceData[j]?.currentJob &&
-        //   endYear &&
+      console.log('year ', this.currentYear);
+
+      const pastJobs = Object.values(this.experienceData).filter((job) => {
+        const startYear = job.startDate.toString().split('/');
+        const endYear = job.endDate.toString().split('/');
+
         if (
-          startYear.toString().includes(this.yearStrings[i]) ||
-          endYear.toString().includes(this.yearStrings[i])
+          (job.currentJob && this.currentYear >= parseInt(startYear[1])) ||
+          this.currentYear === parseInt(endYear[1]) ||
+          (this.currentYear >= parseInt(startYear[1]) &&
+            this.currentYear <= parseInt(endYear[1]))
         ) {
-          const experience = {
-            yearLabel: this.yearStrings[i],
-            companyName: this.experienceData[j].company,
-          };
-          this.professionalExperience.push(experience);
+          return job;
         }
-      }
+        return;
+      });
+
+      const experience = {
+        yearLabel: this.yearStrings[i],
+        company: pastJobs,
+      };
+      this.professionalExperience.push(experience);
+      this.currentYear -= 1;
     }
 
     console.log('professional experience ', this.professionalExperience);

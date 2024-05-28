@@ -60,6 +60,7 @@ export interface IProfile {
   location: string;
 }
 export interface IExperience {
+  jobId: number;
   company: string;
   startDate: Date;
   endDate: Date;

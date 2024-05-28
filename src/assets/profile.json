@@ -10,6 +10,7 @@
   },
   "experience": [
     {
+      "jobId": 1,
       "company": "Apexon corporation",
       "startDate": "07/2020",
       "endDate": "",
@@ -36,6 +37,7 @@
       ]
     },
     {
+      "jobId": 2,
       "company": "IMCS group",
       "startDate": "03/2019",
       "endDate": "06/2020",
@@ -44,6 +46,7 @@
       "duties": [{}]
     },
     {
+      "jobId": 3,
       "company": "Global Hitss",
       "startDate": "05/2018",
       "endDate": "01/2019",
@@ -52,6 +55,7 @@
       "duties": [{}]
     },
     {
+      "jobId": 4,
       "company": "Definity First",
       "startDate": "07/2012",
       "endDate": "05/2018",
@@ -60,6 +64,7 @@
       "duties": [{}]
     },
     {
+      "jobId": 5,
       "company": "Universidad Xochicalco",
       "startDate": "03/2011",
       "endDate": "06/2012",
@@ -68,6 +73,7 @@
       "duties": [{}]
     },
     {
+      "jobId": 6,
       "company": "CICESE",
       "startDate": "02/2008",
       "endDate": "03/2011",
